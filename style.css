@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,7 +6,6 @@
 }
 
 .container{
-    max-width: 1152rem;
     height: 700rem;
     display: flex;
     align-items: center;
@@ -16,6 +14,7 @@
 }
 
 .parent{
+
     width: 336rem;
     height: 236rem;
     border: 1rem solid #C4C4C4;
@@ -41,7 +40,12 @@
 .list{
     transform: translate(84%,19rem);
 }
-
+.down-array{
+    cursor: pointer;
+}
+.include{
+    position: relative;
+}
 .enter{
     width: 286rem;
     height: 40rem;
@@ -49,7 +53,12 @@
     border-radius: 10rem;
     margin-left: 28rem;
     margin-top: 31rem;
-    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14rem;
+    line-height: 16px;
+        
 }
 .add{
     background: #833AE0;
@@ -66,20 +75,30 @@
     color: #FFFFFF;
     margin-top: 17rem;
     margin-left: 92rem;
+    cursor: pointer;
 }
 .plus{
-    background: #9953F1;
-    border-radius: 71rem;
     width: 42rem;
     height: 42rem;
-    border: none;
+    position: absolute;
+    left: 90rem;
+    margin-top: 17rem;
+}
+.delete-icon{
+   position: absolute;
+   top: 40rem;
+   left: 264rem;
+}
+.new-button{
+    width: 286rem;
+    height: 40rem;
+    border: 1rem solid #C4C4C4;
+    border-radius: 10rem;
+    margin-left: 28rem;
+    /* margin-top: 31rem; */
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 14rem;
-    line-height: 16rem;
-    text-align: center;
-    color: #FFFFFF;
-    position: relative;
-    left: -150rem;
+    line-height: 16px;
 }
