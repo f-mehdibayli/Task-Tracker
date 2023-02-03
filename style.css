@@ -37,7 +37,9 @@
     padding-top:12rem;
 } 
 .list{
-    transform: translate(84%,19rem);
+    position: absolute;
+    top: 20rem;
+    right: 30rem;
     cursor: pointer;
 }
 .include{
@@ -54,6 +56,8 @@
     font-size: 14rem;
     line-height: 16px;
     border: none;
+    padding-left: 27rem;
+    padding-right: 55rem;
 }
 .enter:hover {
     border: 1rem solid #C4C4C4;
@@ -87,6 +91,7 @@
    position: absolute;
    top: 10rem;
    left: 235rem;
+   cursor: pointer;
 }
 .new-button{
     width: 284rem;
@@ -111,7 +116,7 @@
     margin-left: 28rem;
 }
 .input-parent{
-    padding-top: 31rem;
+    padding-top: 48rem;
 }
 .input-div-child{
     position: relative;
