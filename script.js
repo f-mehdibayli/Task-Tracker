@@ -17,6 +17,7 @@ listIcon.addEventListener('click',(e)=>{
   } 
 })
 
+
 function customSort() {
   const sonuncuEl = [...inputDiv.childNodes].find(item => !item.childNodes[0]?.value || item.childNodes[0]?.value === '');
   const allTodos = document.querySelectorAll('.input-div-child');
@@ -39,7 +40,7 @@ function customSort() {
       return 0
     })
   }
-  console.log('sortedArr: ', sortedArr);
+  console.log('SortedArr: ', sortedArr);
   sortedArr.forEach(element => {
     inputDiv.insertBefore(element, sonuncuEl)
   });
@@ -54,16 +55,20 @@ listIcon.addEventListener('mouseenter',(e)=>{
 })
 listIcon.addEventListener('mouseleave',(e)=>{
   if (sort === 'azalan') {
-    listIcon.children[0].src='./img/down_arrow_gray.jpg';
+    listIcon.children[0].src='./img/down_arrow_gray.svg';
   } else {
     listIcon.children[0].src='./img/up_arrow_gray.svg';
   } 
 })
 
-const addDeleteFunction = (el) => {
-  el.addEventListener('click', (e) => {
-    e.currentTarget.parentElement.remove();
-  });
+const addDeleteFunction = (el) => { 6
+    el.addEventListener('click', (e) => {
+      if(inputDiv.children.length >1){
+      e.currentTarget.parentElement.remove();
+    }
+    })
+  
+  
   
   el.addEventListener('mouseenter', () => {
     console.log('children', el.children)
@@ -73,19 +78,22 @@ const addDeleteFunction = (el) => {
     el.children[0].src = "./img/delete_icon.svg";
  })
 }
+
 addDeleteFunction(deleteIcon)
 
 function newElement(e){
   e.preventDefault()
   const newDiv=document.createElement('div')
   newDiv.classList.add("input-div-child")
-  const newInput=document.createElement('input');
 
+  const newInput=document.createElement('input');
   newInput.classList.add("enter");
   newInput.type = "text";
   const newSpan=document.createElement('span');
 
+  
   addDeleteFunction(newSpan)
+
   newSpan.classList.add("delete-icon");
   const newImg=document.createElement('img')
   newImg.src = "./img/delete_icon.svg";
@@ -94,12 +102,12 @@ function newElement(e){
   newDiv.appendChild(newSpan);
   inputDiv.appendChild(newDiv)
   newInput.addEventListener('input', e => {
-    newInput.value = e.target.value
+  newInput.value = e.target.value
+
   })
 }
 
 btn.addEventListener('click',newElement)
-
 
 
 
